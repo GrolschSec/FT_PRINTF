@@ -6,7 +6,7 @@
 /*   By: rlouvrie <rlouvrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 17:43:44 by rlouvrie          #+#    #+#             */
-/*   Updated: 2022/07/19 15:44:23 by rlouvrie         ###   ########.fr       */
+/*   Updated: 2022/07/19 16:00:31 by rlouvrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <unistd.h>
 # include <stdarg.h>
 
-int		ft_printf(const char *format, ...);
+int	ft_printf(const char *format, ...);
 void	ft_putchar(char c, int *len);
 void	ft_putstr(char *s, int *len);
 void	ft_putnbr(int n, int *len);
