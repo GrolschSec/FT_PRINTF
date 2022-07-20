@@ -6,7 +6,7 @@
 /*   By: rlouvrie <rlouvrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 18:03:59 by rlouvrie          #+#    #+#             */
-/*   Updated: 2022/07/20 15:18:10 by rlouvrie         ###   ########.fr       */
+/*   Updated: 2022/07/20 16:38:31 by rlouvrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,10 @@ void	ft_putstr(char *s, int *len)
 	int	i;
 
 	if (s == NULL)
+	{
+		ft_putstr("(null)", len);
 		return ;
+	}
 	i = 0;
 	while (s[i])
 	{

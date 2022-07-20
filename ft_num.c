@@ -6,7 +6,7 @@
 /*   By: rlouvrie <rlouvrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 17:44:58 by rlouvrie          #+#    #+#             */
-/*   Updated: 2022/07/20 15:17:58 by rlouvrie         ###   ########.fr       */
+/*   Updated: 2022/07/20 16:42:54 by rlouvrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	ft_putnbr(int n, int *len)
 		ft_putchar('-', len);
 		ft_putnbr(nb, len);
 	}
-	if (nb < 10)
+	else if (nb < 10)
 	{
 		res = nb + 48;
 		ft_putchar(res, len);
@@ -42,13 +42,7 @@ void	ft_putnbr_unsigned(unsigned int nb, int *len)
 {
 	char	res;
 
-	if (nb < 0)
-	{
-		nb = -nb;
-		ft_putchar('-', len);
-		ft_putnbr_unsigned(nb, len);
-	}
-	else if (nb < 10)
+	if (nb < 10)
 	{
 		res = nb + 48;
 		ft_putchar(res, len);
@@ -90,6 +84,7 @@ void	ft_address(void *ptr, int *len)
 	else
 	{
 		adr = (unsigned long long) ptr;
+		printf("%ld", adr);
 		ft_putstr("0x", len);
 		ft_hexa(adr, 0, len);
 	}
