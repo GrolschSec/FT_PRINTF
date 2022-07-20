@@ -6,7 +6,7 @@
 /*   By: rlouvrie <rlouvrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 17:44:58 by rlouvrie          #+#    #+#             */
-/*   Updated: 2022/07/20 16:42:54 by rlouvrie         ###   ########.fr       */
+/*   Updated: 2022/07/20 17:49:27 by rlouvrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,25 +54,19 @@ void	ft_putnbr_unsigned(unsigned int nb, int *len)
 	}
 }
 
-void	ft_hexa(unsigned long long int n, int mode, int *len)
+void	ft_hexa(unsigned int n, int mode, int *len)
 {
 	char	*base16_min;
 	char	*base16_max;
-	char	*choice;
 
 	base16_min = "0123456789abcdef";
 	base16_max = "0123456789ABCDEF";
-	if (mode == 0)
-		choice = base16_min;
-	else if (mode == 1)
-		choice = base16_max;
-	if (n > 16)
-	{
+	if (n > 15)
 		ft_hexa(n / 16, mode, len);
-		ft_putchar(choice[n % 16], len);
-	}
-	else if (n < 16)
-		ft_putchar(choice[n], len);
+	if (mode == 0)
+		ft_putchar(base16_min[n % 16], len);
+	else if (mode == 1 )
+		ft_putchar(base16_max[n % 16], len);
 }
 
 void	ft_address(void *ptr, int *len)
@@ -84,8 +78,18 @@ void	ft_address(void *ptr, int *len)
 	else
 	{
 		adr = (unsigned long long) ptr;
-		printf("%ld", adr);
 		ft_putstr("0x", len);
-		ft_hexa(adr, 0, len);
+		ft_hexa2(adr, len);
+		
 	}
+}
+
+void	ft_hexa2(unsigned long long n, int *len)
+{
+	char	*base16;
+
+	base16 = "0123456789abcdef";
+	if (n > 15)
+		ft_hexa2(n / 16, len);
+	ft_putchar(base16[n % 16], len);
 }
