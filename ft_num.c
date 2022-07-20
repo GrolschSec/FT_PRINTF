@@ -6,11 +6,11 @@
 /*   By: rlouvrie <rlouvrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 17:44:58 by rlouvrie          #+#    #+#             */
-/*   Updated: 2022/07/19 15:47:09 by rlouvrie         ###   ########.fr       */
+/*   Updated: 2022/07/20 15:17:58 by rlouvrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "ft_printf.h"
 
 void	ft_putnbr(int n, int *len)
 {

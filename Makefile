@@ -4,10 +4,7 @@ NAME = libftprintf.a
 CC = gcc
 # Flag to compile
 CFLAGS = -Wall -Wextra -Werror
-# Generated objects dir
-OBJ_DIR = objs
-# Sources dir
-SRC_DIR = srcs
+
 # Source code
 SRC = ft_printf.c \
 	ft_num.c \
@@ -18,20 +15,17 @@ OBJ = $(SRC:.c=.o)
 all: $(NAME)
 # libftprintf.a rule
 $(NAME): $(OBJ)
-	ar rc $(NAME) $(addprefix $(OBJ_DIR)/,$^)
+	ar rc $(NAME) $^
 	ranlib $(NAME)
 # Generating objects
-%.o: $(SRC_DIR)/%.c object
+%.o: %.c 
 	@echo "\033[0;33mGenerating obj..."
-	$(CC) $(CFLAGS) -c -o $(OBJ_DIR)/$@ $<
+	$(CC) $(CFLAGS) -c -o $@ $<
 	@echo "\033[0m"
-# Make the object dir
-object:
-	mkdir -p objs
-# Remove the object dir
+# Remove the object files
 clean:
-	rm -rf ./objs
-# Remove the object dir and the library
+	rm ./*.o
+# Remove the object files and the library
 fclean: clean
 	rm -f $(NAME)
 # Re link

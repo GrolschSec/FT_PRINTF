@@ -6,11 +6,11 @@
 /*   By: rlouvrie <rlouvrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 17:43:20 by rlouvrie          #+#    #+#             */
-/*   Updated: 2022/07/19 15:43:54 by rlouvrie         ###   ########.fr       */
+/*   Updated: 2022/07/20 15:18:03 by rlouvrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "ft_printf.h"
 
 void	ft_printf_args(va_list ap, const char *format, int *len)
 {
