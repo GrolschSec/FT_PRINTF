@@ -6,7 +6,7 @@
 /*   By: rlouvrie <rlouvrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 17:44:58 by rlouvrie          #+#    #+#             */
-/*   Updated: 2022/07/20 17:49:27 by rlouvrie         ###   ########.fr       */
+/*   Updated: 2022/07/20 17:56:39 by rlouvrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ void	ft_address(void *ptr, int *len)
 	unsigned long long	adr;
 	
 	if (!ptr)
-		ft_putstr("(nill)", len);
+		ft_putstr("(nil)", len);
 	else
 	{
 		adr = (unsigned long long) ptr;
