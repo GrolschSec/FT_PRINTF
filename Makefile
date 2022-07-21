@@ -24,7 +24,7 @@ $(NAME): $(OBJ)
 	@echo "\033[0m"
 # Remove the object files
 clean:
-	rm ./*.o
+	rm -f ./*.o
 # Remove the object files and the library
 fclean: clean
 	rm -f $(NAME)
