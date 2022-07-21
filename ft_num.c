@@ -65,14 +65,14 @@ void	ft_hexa(unsigned int n, int mode, int *len)
 		ft_hexa(n / 16, mode, len);
 	if (mode == 0)
 		ft_putchar(base16_min[n % 16], len);
-	else if (mode == 1 )
+	else if (mode == 1)
 		ft_putchar(base16_max[n % 16], len);
 }
 
 void	ft_address(void *ptr, int *len)
 {
 	unsigned long long	adr;
-	
+
 	if (!ptr)
 		ft_putstr("(nil)", len);
 	else
@@ -80,7 +80,6 @@ void	ft_address(void *ptr, int *len)
 		adr = (unsigned long long) ptr;
 		ft_putstr("0x", len);
 		ft_hexa2(adr, len);
-		
 	}
 }
 
