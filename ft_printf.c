@@ -6,7 +6,7 @@
 /*   By: rlouvrie <rlouvrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 17:43:20 by rlouvrie          #+#    #+#             */
-/*   Updated: 2022/07/20 15:18:03 by rlouvrie         ###   ########.fr       */
+/*   Updated: 2022/07/25 22:24:00 by rlouvrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,6 @@ void	ft_printf_args(va_list ap, const char *format, int *len)
 		ft_hexa(va_arg(ap, unsigned long long int), 1, len);
 	else if (*format == '%')
 		ft_putchar('%', len);
-	else
-		ft_putchar(*format, len);
 }
 
 int	ft_printf(const char *format, ...)
